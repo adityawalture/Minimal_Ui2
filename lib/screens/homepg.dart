@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import "package:flutter/material.dart";
+import 'package:shopping_ui/components/body.dart';
 import 'package:shopping_ui/constraints.dart';
 
 import '../constraints.dart';
@@ -17,13 +18,18 @@ class _HomePgState extends State<HomePg> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildAppBar(),
+      body: Body(),
     );
   }
 
   AppBar buildAppBar() {
     return AppBar(
+      title: Text(
+        'Minimal Ui',
+        style: TextStyle(color: kTextColor, fontFamily: 'RaleWay'),
+      ),
       backgroundColor: Colors.white,
-      elevation: 2,
+      elevation: 0,
       leading: IconButton(
         icon: Icon(
           Icons.arrow_back_ios,
